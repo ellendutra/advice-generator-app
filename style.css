@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--light-cyan);
+  background-color: var(--dark-blue);
+  text-align: center;
+  display: grid;
+  height: 100vh; 
+  align-items: center; 
+  justify-items: center; 
+}
+
+.main {
+  background-color: var(--dark-grayish-blue);
+  width: 540px;
+  height: auto;
+  padding: 32px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.main__span {
+  color: var(--neon-green);
+  font-size: 12px;
+  letter-spacing: .2rem;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.main__quote{
+  display: block;
+}
+
+.main__divider {
+  background-image: url("./images/pattern-divider-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 73px;
+}
+
+.main__button {
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-image: url("./images/icon-dice.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  transform: translate(-30px, -30px);
+  top: 100%;
+}
+
+.main__button:hover {
+  box-shadow: 0px 0px 40px var(--neon-green);
+}
+
+@media screen and (max-width: 425px){
+  body {
+    height: 65vh;
+  }
+
+  .main{
+    width: 90%;
+  }
+
+  .main__divider {
+    background-image: url("./images/pattern-divider-mobile.svg");
+  }
+
+  .main__button:hover {
+    box-shadow: none;
+  }
+
+  .main__button:active{
+    box-shadow: 0px 0px 40px var(--neon-green);
+  }
+}
